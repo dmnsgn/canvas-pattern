@@ -1,0 +1,41 @@
+{
+  "name": "canvas-pattern",
+  "version": "1.0.0",
+  "description": "Draw and cache a repeated pattern on a canvas context.",
+  "keywords": [
+    "canvas",
+    "pattern",
+    "cache"
+  ],
+  "homepage": "https://github.com/dmnsgn/canvas-pattern",
+  "bugs": "https://github.com/dmnsgn/canvas-pattern/issues",
+  "repository": "dmnsgn/canvas-pattern",
+  "funding": [
+    {
+      "type": "individual",
+      "url": "https://paypal.me/dmnsgn"
+    },
+    {
+      "type": "individual",
+      "url": "https://commerce.coinbase.com/checkout/56cbdf28-e323-48d8-9c98-7019e72c97f3"
+    }
+  ],
+  "license": "MIT",
+  "author": "Damien Seguin (https://github.com/dmnsgn)",
+  "sideEffects": false,
+  "type": "module",
+  "exports": "./index.js",
+  "main": "index.js",
+  "types": "types/index.d.ts",
+  "engines": {
+    "node": ">=15.0.0",
+    "npm": ">=7.0.0"
+  },
+  "devDependencies": {
+    "async-preloader": "^5.2.0",
+    "canvas-context": "^3.1.0",
+    "core-js": "^3.19.1",
+    "es-module-shims": "^0.12.8",
+    "tweakpane": "^3.0.5"
+  }
+}

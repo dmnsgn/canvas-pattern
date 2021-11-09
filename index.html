@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>canvas-pattern by Damien Seguin (https://github.com/dmnsgn)</title>
+    <style>
+      :root {
+        --color-dark: #404040;
+        --color-light: #f2f2f2;
+        --color-accent: #fd5e62;
+      }
+
+      body {
+        margin: 0;
+        overscroll-behavior: none;
+        font-family: sans-serif;
+        color: var(--color-light);
+        background-color: var(--color-dark);
+      }
+
+      main {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+      h1 {
+        position: absolute;
+        top: 0;
+        left: 20px;
+      }
+      code {
+        position: absolute;
+        top: 60px;
+        left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>canvas-pattern</h1>
+      <code></code>
+    </main>
+    <script async src="web_modules/es-module-shims.js"></script>
+    <script src="web_modules/import-map.json" type="importmap"></script>
+
+    <script type="module">
+      import drawImagePattern from "./index.js";
+      import createCanvasContext from "canvas-context";
+      import AsyncPreloader from "async-preloader";
+      import { Pane } from "tweakpane";
+
+      const CONFIG = {
+        cache: true,
+      };
+      const pane = new Pane();
+      pane.addInput(CONFIG, "cache");
+
+      const { canvas: patternCanvas, context: patternContext } =
+        createCanvasContext("2d");
+      const { canvas, context } = createCanvasContext("2d");
+      document.querySelector("main").appendChild(canvas);
+      const codeElement = document.querySelector("code");
+
+      const average = (arr) => arr.reduce((p, c) => p + c, 0) / arr.length;
+      let times = [];
+
+      function draw() {
+        // Background
+        context.clearRect(0, 0, context.canvas.width, context.canvas.height);
+        context.fillStyle = `${window
+          .getComputedStyle(document.documentElement)
+          .getPropertyValue("--color-dark")}`;
+        context.fillRect(0, 0, context.canvas.width, context.canvas.height);
+
+        const startTime = performance.now();
+
+        // Pattern
+        drawImagePattern(context, patternCanvas, {
+          cache: CONFIG.cache,
+        });
+
+        times.unshift(performance.now() - startTime);
+        times = times.splice(0, 100);
+
+        codeElement.innerText = `Draw time: ${average(times).toFixed(3)}ms`;
+
+        requestAnimationFrame(draw);
+      }
+
+      // Resize handler
+      const onResize = () => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      };
+
+      window.addEventListener("resize", onResize);
+      onResize();
+
+      // Load the pattern image and resize it into the pattern canvas
+      await AsyncPreloader.loadItem({
+        id: "uv",
+        src: "examples/uv.jpg",
+      });
+      patternCanvas.width = 128;
+      patternCanvas.height = 128;
+      patternContext.drawImage(AsyncPreloader.items.get("uv"), 0, 0, 128, 128);
+
+      draw();
+    </script>
+  </body>
+</html>
