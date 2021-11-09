@@ -42,7 +42,63 @@ drawImagePattern(context, pattern);
 
 <!-- api-start -->
 
-Auto-generated API content.
+## Modules
+
+<dl>
+<dt><a href="#module_canvasPattern">canvasPattern</a></dt>
+<dd></dd>
+</dl>
+
+## Typedefs
+
+<dl>
+<dt><a href="#CanvasPatternRepetition">CanvasPatternRepetition</a> : <code>&quot;repeat&quot;</code> | <code>&quot;repeat-x&quot;</code> | <code>&quot;repeat-y&quot;</code> | <code>&quot;no-repeat&quot;</code></dt>
+<dd></dd>
+<dt><a href="#CanvasPatternOptions">CanvasPatternOptions</a> : <code>Object</code></dt>
+<dd><p>Options to draw. All optional.</p>
+</dd>
+</dl>
+
+<a name="module_canvasPattern"></a>
+
+## canvasPattern
+
+<a name="exp_module_canvasPattern--canvasPattern"></a>
+
+### canvasPattern(context, source, [options]) ⇒ <code>CanvasPattern</code> ⏏
+
+Draw and cache a repeated pattern on a canvas context.
+
+**Kind**: Exported function
+
+| Param     | Type                                                       | Default         | Description                                                     |
+| --------- | ---------------------------------------------------------- | --------------- | --------------------------------------------------------------- |
+| context   | <code>CanvasRenderingContext2D</code>                      |                 | The context to draw the pattern to                              |
+| source    | <code>CanvasImageSource</code>                             |                 | The pattern to be drawn                                         |
+| [options] | [<code>CanvasPatternOptions</code>](#CanvasPatternOptions) | <code>{}</code> | The options to position the pattern and controls its repetition |
+
+<a name="CanvasPatternRepetition"></a>
+
+## CanvasPatternRepetition : <code>&quot;repeat&quot;</code> \| <code>&quot;repeat-x&quot;</code> \| <code>&quot;repeat-y&quot;</code> \| <code>&quot;no-repeat&quot;</code>
+
+**Kind**: global typedef  
+<a name="CanvasPatternOptions"></a>
+
+## CanvasPatternOptions : <code>Object</code>
+
+Options to draw. All optional.
+
+**Kind**: global typedef  
+**Properties**
+
+| Name         | Type                                                             | Description                                                                |
+| ------------ | ---------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| [pattern]    | <code>CanvasPattern</code>                                       | The CanvasPattern to draw. Created and returned by the function for reuse. |
+| [repetition] | [<code>CanvasPatternRepetition</code>](#CanvasPatternRepetition) | A DOMString indicating how to repeat the pattern's image.                  |
+| [x]          | <code>number</code>                                              |                                                                            |
+| [y]          | <code>number</code>                                              |                                                                            |
+| [width]      | <code>number</code>                                              |                                                                            |
+| [height]     | <code>number</code>                                              |                                                                            |
 
 <!-- api-end -->
 
