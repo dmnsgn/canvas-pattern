@@ -46,7 +46,7 @@
     <script src="web_modules/import-map.json" type="importmap"></script>
 
     <script type="module">
-      import drawImagePattern from "./index.js";
+      import canvasPattern from "./index.js";
       import createCanvasContext from "canvas-context";
       import AsyncPreloader from "async-preloader";
       import { Pane } from "tweakpane";
@@ -77,7 +77,7 @@
         const startTime = performance.now();
 
         // Pattern
-        drawImagePattern(context, patternCanvas, {
+        canvasPattern(context, patternCanvas, {
           cache: CONFIG.cache,
         });
 

@@ -30,12 +30,13 @@ npm install canvas-pattern
 import canvasPattern from "canvas-pattern";
 import createCanvasContext from "canvas-context";
 
-const { context } = createCanvasContext("2d");
+const { canvas, context } = createCanvasContext("2d");
+document.body.appendChild(canvas);
 
 const pattern = new Image();
 pattern.src = "pattern.png";
 
-drawImagePattern(context, pattern);
+canvasPattern(context, pattern);
 ```
 
 ## API
