@@ -2,7 +2,7 @@
 
 [![npm version](https://img.shields.io/npm/v/canvas-pattern)](https://www.npmjs.com/package/canvas-pattern)
 [![stability-stable](https://img.shields.io/badge/stability-stable-green.svg)](https://www.npmjs.com/package/canvas-pattern)
-[![npm minzipped size](https://img.shields.io/bundlephobia/minzip/canvas-pattern)](https://www.npmjs.com/package/canvas-pattern)
+[![npm minzipped size](https://img.shields.io/bundlephobia/minzip/canvas-pattern)](https://bundlephobia.com/package/canvas-pattern)
 [![dependencies](https://img.shields.io/librariesio/release/npm/canvas-pattern)](https://github.com/dmnsgn/canvas-pattern/blob/main/package.json)
 [![types](https://img.shields.io/npm/types/canvas-pattern)](https://github.com/microsoft/TypeScript)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-fa6673.svg)](https://conventionalcommits.org)
