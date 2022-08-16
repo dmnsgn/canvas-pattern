@@ -28,14 +28,13 @@
   "main": "index.js",
   "types": "types/index.d.ts",
   "devDependencies": {
-    "async-preloader": "^5.2.0",
-    "canvas-context": "^3.1.0",
-    "core-js": "^3.19.1",
-    "es-module-shims": "^0.12.8",
-    "tweakpane": "^3.0.5"
+    "async-preloader": "^7.0.0",
+    "canvas-context": "^3.2.0",
+    "es-module-shims": "^1.5.16",
+    "tweakpane": "^3.1.0"
   },
   "engines": {
-    "node": ">=15.0.0",
+    "node": ">=16.0.0",
     "npm": ">=7.0.0"
   }
 }
