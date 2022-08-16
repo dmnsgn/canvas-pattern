@@ -1,6 +1,6 @@
 {
   "name": "canvas-pattern",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Draw and cache a repeated pattern on a canvas context.",
   "keywords": [
     "canvas",

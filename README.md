@@ -82,14 +82,14 @@ Draw and cache a repeated pattern on a canvas context.
 
 ## CanvasPatternRepetition : <code>&quot;repeat&quot;</code> \| <code>&quot;repeat-x&quot;</code> \| <code>&quot;repeat-y&quot;</code> \| <code>&quot;no-repeat&quot;</code>
 
-**Kind**: global typedef  
+**Kind**: global typedef
 <a name="CanvasPatternOptions"></a>
 
 ## CanvasPatternOptions : <code>Object</code>
 
 Options to draw. All optional.
 
-**Kind**: global typedef  
+**Kind**: global typedef
 **Properties**
 
 | Name         | Type                                                             | Description                                                                |
