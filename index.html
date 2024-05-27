@@ -57,7 +57,7 @@
         cache: true,
       };
       const pane = new Pane();
-      pane.addInput(CONFIG, "cache");
+      pane.addBinding(CONFIG, "cache");
 
       const { canvas: patternCanvas, context: patternContext } =
         createCanvasContext("2d");
