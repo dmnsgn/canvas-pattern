@@ -55,7 +55,7 @@ canvasPattern(context, pattern);
 <dl>
 <dt><a href="#CanvasPatternRepetition">CanvasPatternRepetition</a> : <code>&quot;repeat&quot;</code> | <code>&quot;repeat-x&quot;</code> | <code>&quot;repeat-y&quot;</code> | <code>&quot;no-repeat&quot;</code></dt>
 <dd></dd>
-<dt><a href="#CanvasPatternOptions">CanvasPatternOptions</a> : <code>Object</code></dt>
+<dt><a href="#CanvasPatternOptions">CanvasPatternOptions</a> : <code>object</code></dt>
 <dd><p>Options to draw. All optional.</p>
 </dd>
 </dl>
@@ -85,7 +85,7 @@ Draw and cache a repeated pattern on a canvas context.
 **Kind**: global typedef
 <a name="CanvasPatternOptions"></a>
 
-## CanvasPatternOptions : <code>Object</code>
+## CanvasPatternOptions : <code>object</code>
 
 Options to draw. All optional.
 
