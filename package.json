@@ -29,9 +29,9 @@
   "types": "types/index.d.ts",
   "devDependencies": {
     "async-preloader": "^8.0.3",
-    "canvas-context": "^3.2.0",
+    "canvas-context": "^3.3.0",
     "es-module-shims": "^1.10.0",
-    "tweakpane": "^4.0.3"
+    "tweakpane": "^4.0.4"
   },
   "engines": {
     "node": ">=22.0.0",
