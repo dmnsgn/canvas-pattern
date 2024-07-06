@@ -1,6 +1,6 @@
 {
   "name": "canvas-pattern",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Draw and cache a repeated pattern on a canvas context.",
   "keywords": [
     "canvas",
@@ -9,7 +9,10 @@
   ],
   "homepage": "https://github.com/dmnsgn/canvas-pattern",
   "bugs": "https://github.com/dmnsgn/canvas-pattern/issues",
-  "repository": "dmnsgn/canvas-pattern",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmnsgn/canvas-pattern.git"
+  },
   "funding": [
     {
       "type": "individual",
