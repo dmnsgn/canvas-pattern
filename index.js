@@ -45,3 +45,5 @@ function canvasPattern(context, source, options = {}) {
 }
 
 export default canvasPattern;
+
+export * from "./types.js";
